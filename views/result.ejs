@@ -1,0 +1,36 @@
+<%- include("header") -%>
+
+<main role="main" class="inner cover">
+    <!--<h1 class="cover-heading">Weather Station</h1>-->
+    <form action="/result" method="post">
+        <button type="submit" class="btn btn-sm btn-secondary">Search Another Location</button>
+    </form>
+</main>
+
+<h2> <%= place %> </h2>
+<div class="table">
+    <table>
+        <tr>
+            <td>Date:</td>
+            <td><%= kindOfDay %></td>
+        </tr>
+        <tr>
+            <td>Temperature:</td>
+            <td><%= temperature %> °C </td>
+        </tr>
+        <tr>
+            <td>Humidity: </td>
+            <td><%= humidity %> % </td>
+        </tr>
+        <tr>
+            <td>Wind:</td>
+            <td><%= windSpeed %> km/h</td>
+        </tr>
+        <tr>
+            <td>Description:</td>
+            <td><%= description %></td>
+        </tr>
+    </table>
+</div>
+
+<%- include("footer") -%>
