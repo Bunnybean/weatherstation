@@ -66,9 +66,7 @@ app.get("/result", function(req, resp){
             let wind = weatherData.wind.speed;
 
                 resp.render("result", {kindOfDay: day, place:query, temperature:temp, description:desc, humidity:humid, windSpeed: wind});
-            //let icon = weatherData.weather[0].icon;
-            //let imgURL = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
-            //resp.render("result", {kindOfDay: day, place:query, temperature:temp, description: desc, img:imgURL});
+
 
             //test
             console.log(weatherData);
@@ -90,4 +88,3 @@ if (port == null || port == "") {
 app.listen(port, function(){
     console.log("Server is running on port 3000");
 });
-
